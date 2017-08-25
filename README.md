@@ -3,6 +3,8 @@ Lip Reading in the Wild using ResNet and LSTMs in Torch
 
 This repository contains the code I used to train and evaluate (most of) the models described in [Combining Residual Networks with LSTMs for Lipreading](https://arxiv.org/pdf/1703.04105.pdf) by T. Stafylakis and G. Tzimiropoulos
 
+The code is based on facebook’s implementation of [ResNets](https://github.com/facebook/fb.resnet.torch)
+
 ## Requirements
 See the [installation instructions](INSTALL.md) for a step-by-step guide.
 - Install [Torch](http://torch.ch/docs/getting-started.html) on a machine with CUDA GPU
@@ -35,7 +37,11 @@ Please send me an email at themos.stafylakis@nottingham.ac.uk
 
 ## Number of frames
 
-The number of frames per clip is 29. In the paper we refer to 31 because I used a later version of `ffmpeg` to extract images, that (for some unknown reason) prepends two copies of the first frame.
+The number of frames per clip is 29. In the paper we refer to 31 because I used an older version of `ffmpeg` to extract images, that (for some unknown reason) prepends two copies of the first frame.
+
+## Landmark Detection vs. 
+
+In my original implementation I used landmark detection, based on which I was estimating the boundaries of the mouth region. However, one can skip this step and crop the frames using a fixed window (see `datasets/BBCnet.lua`) since the faces are already centered. 
 
 ## Model Parameters, SoftMax and pooling
 
@@ -49,7 +55,7 @@ I didn't notice any substantial difference between the three approaches.
 
 ## Word Boundaries
 
-Currently, the models do not make use of the word boundaries that are provided with the dataset. However, I will soon upload code that makes use of them. The performace is about 12.7% error rate, compared to 17.0%.
+Currently, the models do not make use of the word boundaries that are provided with the dataset. However, I will soon upload code that makes use of them. The performance is about 12.7% error rate, compared to 17.0%.
 
 
 
