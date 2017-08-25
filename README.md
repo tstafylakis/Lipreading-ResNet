@@ -39,7 +39,7 @@ Please send me an email at themos.stafylakis@nottingham.ac.uk
 
 The number of frames per clip is 29. In the paper we refer to 31 because I used an older version of `ffmpeg` to extract images, that (for some unknown reason) prepends two copies of the first frame.
 
-## Landmark Detection vs. 
+## Landmark Detection
 
 In my original implementation I used landmark detection, based on which I was estimating the boundaries of the mouth region. However, one can skip this step and crop the frames using a fixed window (see `datasets/BBCnet.lua`) since the faces are already centered. 
 
