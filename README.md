@@ -27,7 +27,7 @@ This is the suggested order to train the models:
 (ii) Throw away the temporal convolutional backend, freeze the parameters of the frontend and the ResNet and train the LSTM backend (set -netType='LSTM_init'). 5 epochs are enough to get a sensible initialization of the LSTM. Set `-LR 0.003`
 (iii) Train the whole network end-to-end (set -netType=LSTM). In this case, set `-LR 0.0005` and about 30 epochs.
 
-The (i) should should yield about 25% error rate and (iii) about 17%.
+The (i) should yield about 25% error rate and (iii) about 17%.
 
 All these steps are performed (semi-)automatically by the code. You should (a) change the `netType` and `LR` parameters and (b) set the `retrain` parameter to the path where the previous model is stored. For (i), set `retrain` to `none`.
 
