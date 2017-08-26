@@ -3,7 +3,7 @@ Lip Reading in the Wild using ResNet and LSTMs in Torch
 
 This repository contains the code I used to train and evaluate (most of) the models described in [Combining Residual Networks with LSTMs for Lipreading](https://arxiv.org/pdf/1703.04105.pdf) by T. Stafylakis and G. Tzimiropoulos
 
-The code is based on facebook’s implementation of [ResNets](https://github.com/facebook/fb.resnet.torch)
+The code is based on facebook's implementation of [ResNets](https://github.com/facebook/fb.resnet.torch)
 
 ## Requirements
 See the [installation instructions](INSTALL.md) for a step-by-step guide.
@@ -27,9 +27,11 @@ This is the suggested order to train the models:
 (ii) Throw away the temporal convolutional backend, freeze the parameters of the frontend and the ResNet and train the LSTM backend (set -netType='LSTM_init'). 5 epochs are enough to get a sensible initialization of the LSTM. Set `-LR 0.003`
 (iii) Train the whole network end-to-end (set -netType=LSTM). In this case, set `-LR 0.0005` and about 30 epochs.
 
-The (i) should should yield about 23% error rate and (iii) about 17%.
+The (i) should should yield about 25% error rate and (iii) about 17%.
 
-All these steps are performed (semi-)automatically by the code. You should (a) change the `netType` and `LR` parameters and (b) set the `retrain` parameter to the path where the previous model is stored. For (i), set `retrain` to `none`. 
+All these steps are performed (semi-)automatically by the code. You should (a) change the `netType` and `LR` parameters and (b) set the `retrain` parameter to the path where the previous model is stored. For (i), set `retrain` to `none`.
+
+I used a single GPU without any of the memory optimization methods of the original ResNet (e.g. shareGradInput, optnet).
 
 ## Pretrained models
 
