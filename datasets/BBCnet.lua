@@ -35,7 +35,7 @@ function BBCnetDataset:get(i)
 
    local p1 = self.opt.imagecrop
    local p2 = paths.basename(string.sub(path,1,string.len(path)-8))
-   local className = string.sub(p2,1,string.len(2)-8)
+   local className = string.sub(p2,1,-7)
    local p3 = p1 .. className .. "/" .. self.split .. "/" .. p2 .. ".t7"
    
    --images = images*255 -- Use this to start from the images.
