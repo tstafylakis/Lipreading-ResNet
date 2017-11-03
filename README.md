@@ -59,6 +59,10 @@ I didn't notice any substantial difference between the three approaches.
 
 Currently, the models do not make use of the word boundaries that are provided with the dataset. However, I will soon upload code that makes use of them. The performance is about 12.7% error rate, compared to 17.0%.
 
+## Deep word embeddings for visual speech recognition
+
+I will soon upload the code here. It is largely based on this code, with some differences mainly on the backend and on the use of word boundaries. 
+
 
 
 
