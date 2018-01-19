@@ -57,12 +57,12 @@ function BBCnetDataset:_loadImage(p, Bb)
    local Do = self.opt.Dimage + 2*Dmarg -- 112 + 2*5 = 122 
    local tocrop = torch.Tensor{80,116,176,212} -- or use Bb variable to define you our cropping coordinates
    
-   local collection = torch.Tensor(Nfr,3,Do,Do)
+   local collection = torch.Tensor(Nfr,1,Do,Do)
    local i=0
    for i=1,Nfr do
        local path_i = string.sub(p,1,string.len(p)-7) .. string.format("%03d",i) .. ".png" -- GRAYSCALE ASSUMED
        local ok, input = pcall(function()
-          return image.load(path_i, 3, 'float')
+          return image.load(path_i, 1, 'float')
        end)
        
        input = image.crop(input,tocrop[1],tocrop[2],tocrop[3],tocrop[4])
