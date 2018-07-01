@@ -9,10 +9,8 @@ The code is based on facebook's implementation of [ResNets](https://github.com/f
 See the [installation instructions](INSTALL.md) for a step-by-step guide.
 - Install [Torch](http://torch.ch/docs/getting-started.html) on a machine with CUDA GPU
 - Install [cuDNN v4 or v5](https://developer.nvidia.com/cudnn) and the Torch [cuDNN bindings](https://github.com/soumith/cudnn.torch/tree/R4)
-- Install [rnn](https://github.com/Element-Research/rnn)
-- Download the [Lip Reading in the Wild](www.robots.ox.ac.uk/~vgg/data/lip_reading/) dataset
-
-If you already have Torch installed, update `nn`, `cunn`, `cudnn` and `rnn`.
+- Install [rnn](https://github.com/Element-Research/rnn) (not tested with more recent versions).
+- Download the [Lip Reading in the Wild](https://www.robots.ox.ac.uk/~vgg/data/lip_reading/) dataset
 
 ## Training
 
@@ -35,7 +33,7 @@ I used a single GPU without any of the memory optimization methods of the origin
 
 ## Pretrained models
 
-Please send me an email at themos.stafylakis@nottingham.ac.uk
+Please send me an email at themos.stafylakis@nottingham.ac.uk or at themosst@gmail.com.
 
 ## Number of frames
 
@@ -61,7 +59,7 @@ Currently, the models do not make use of the word boundaries that are provided w
 
 ## Deep word embeddings for visual speech recognition
 
-I will soon upload the code here. It is largely based on this code, with some differences mainly on the backend and on the use of word boundaries. 
+It is largely based on this code, with some differences mainly on the backend and on the use of word boundaries. 
 
 
 
