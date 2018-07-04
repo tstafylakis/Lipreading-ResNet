@@ -7,7 +7,7 @@ paths = require 'paths'
 path_to_model = '/udisk/pszts/AV-ASR-data/BBC_Oxford/F_V_BBC_LSTM_resnet18_nopoolx2_f29_E2E/checkpoints/model_best.t7' --change this to the path your model is
 -- You can also download a pretrained model from here: https://www.dropbox.com/s/85ppfyqtdih8fte/LipReadingNet_resnet18_f29.t7?dl=0 (18-layer instead of 34, works equally well).	      
 path_to_vocal = 'vocab.txt' --you can do "wget http://www.robots.ox.ac.uk/~vgg/data/lip_reading/vocab.txt" to download it
-dir_to_val_files = './videos_from_LRW_val_set' -- 5 .t7 files from val set are stored. Use image toolkit to see how they look. Check the code (datasets/BBCnet.lua) to see how to create them from the .mp4 files.
+dir_to_val_files = './' -- 5 .t7 files from val set are stored. Use image toolkit to see how they look. Check the code (datasets/BBCnet.lua) to see how to create them from the .mp4 files.
 
 meanstd = {
    mean = { 0.4161},
