@@ -15,9 +15,6 @@ See the [installation instructions](INSTALL.md) for a step-by-step guide.
 ## Training
 
 The training scripts come with several options, which can be listed with the `--help` flag.
-```bash
-th main.lua --help
-```
 
 This is the suggested order to train the models:
 
@@ -34,6 +31,10 @@ I used a single GPU without any of the memory optimization methods of the origin
 ## Pretrained models
 
 Please send me an email at themos.stafylakis@nottingham.ac.uk or at themosst@gmail.com.
+
+## Examples of LRW and how to evaluate on them
+
+In fast_evaluation you will find evaluate_examples.lua, together with some files (in torch format) from LRW and its vocabulary (500 words). Run the script and verify that (at least most of) the 5 examples are correctly classified. The .t7 files are also useful in order to check how the input of the ResNet should look like.  
 
 ## Number of frames
 
