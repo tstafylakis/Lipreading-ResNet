@@ -27,6 +27,7 @@ The (i) should yield about 25% error rate and (iii) about 17%.
 All these steps are performed (semi-)automatically by the code. You should (a) change the `netType` and `LR` parameters and (b) set the `retrain` parameter to the path where the previous model is stored. For (i), set `retrain` to `none`.
 
 I used a single GPU without any of the memory optimization methods of the original ResNet (e.g. shareGradInput, optnet).
+In case you want to evaluate on CPU, you should convert cudnn modules to the corresponding nn (which support CPU). To do so, use convert.lua function. 
 
 ## Pretrained models
 
