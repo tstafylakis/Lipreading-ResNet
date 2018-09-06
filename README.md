@@ -18,7 +18,7 @@ The training scripts come with several options, which can be listed with the `--
 
 This is the suggested order to train the models:
 
-(i) Start by training a model with temporal convolutional backend (set `-netType 'temp-conv'`). Set `-LR 0.003` and let it for about 30 epochs.
+(i) Start by training a model with temporal convolutional backend (set `-netType 'temp_conv'`). Set `-LR 0.003` and let it for about 30 epochs.
 (ii) Throw away the temporal convolutional backend, freeze the parameters of the frontend and the ResNet and train the LSTM backend (set `-netType 'LSTM_init'`). 5 epochs are enough to get a sensible initialization of the LSTM. Set `-LR 0.003`
 (iii) Train the whole network end-to-end (set `-netType 'LSTM'`). In this case, set `-LR 0.0005` and about 30 epochs.
 
