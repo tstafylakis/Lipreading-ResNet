@@ -45,7 +45,7 @@ function M.parse(arg)
    cmd:option('-momentum',        0.9,   'momentum')
    cmd:option('-weightDecay',     1e-4,  'weight decay')
    ---------- Model options ----------------------------------
-   cmd:option('-netType',      'temp-conv', 'Defines the backend: temp-conv | LSTM_init | LSTM')
+   cmd:option('-netType',      'temp_conv', 'Defines the backend: temp_conv | LSTM_init | LSTM')
    cmd:option('-inputDim',      256)
    cmd:option('-hiddenDim',      256) -- for LSTM
    cmd:option('-depth',        34,       'ResNet depth: 18 | 34 | 50 | 101 | ...', 'number') -- Try 18 as well, equivalent results.
