@@ -41,6 +41,10 @@ In fast_evaluation you will find evaluate_examples.lua, together with some files
 
 The number of frames per clip is 29. In the paper we refer to 31 because I used an older version of `ffmpeg` to extract images, that (for some unknown reason) prepends two copies of the first frame.
 
+## Learning Rate
+
+The initial learning rate is ideal for the particular batch size. If you decide the reduce the batch size (e.g. due to GPU memory limitations) you should reduce the learning rate too, overwise the algorithm will never converge.
+
 ## Landmark Detection
 
 In my original implementation I used landmark detection, based on which I was estimating the boundaries of the mouth region. However, one can skip this step and crop the frames using a fixed window (see `datasets/BBCnet.lua`) since the faces are already centered. 
