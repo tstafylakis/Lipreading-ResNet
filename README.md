@@ -5,6 +5,9 @@ This repository contains the code I used to train and evaluate (most of) the mod
 
 The code is based on facebook's implementation of [ResNets](https://github.com/facebook/fb.resnet.torch)
 
+## NEW: Pytorch and AudioVisual versions
+A Pytorch version of the code is now available, together with pretrained models for Visual, Audio and AudioVisual word recognition on the same database. You can find them [here](https://sites.google.com/view/audiovisual-speech-recognition/). They are based on the [End-to-end Audiovisual Speech Recognition](https://arxiv.org/pdf/1802.06424.pdf) ICASSP-2018 paper we co-authored with S. Petridis, P. Ma, F Cai, and M. Pantic from Imperial College London. 
+
 ## Requirements
 See the [installation instructions](INSTALL.md) for a step-by-step guide.
 - Install [Torch](http://torch.ch/docs/getting-started.html) on a machine with CUDA GPU
